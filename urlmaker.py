@@ -3,6 +3,7 @@ import requests
 import json
 import urllib.parse
 with open("D:\\PythonFiles\\tramstop_google_url.json",encoding='utf-8') as file:#orkar inte hålla på med filväg här
+
     y = json.load(file)
 print(len(y))
 url = "https://www.vasttrafik.se/reseplanering/hallplatslista/"
@@ -36,8 +37,9 @@ for i in linkdict:
 
 print(len(findict))
 
-z = json.dumps(findict)
-with open("TRAM_URL_FILE.json", "w",encoding="utf-8") as file:
+z = json.dumps(findict, indent=1, ensure_ascii=False)
+
+with open("TRAM_URL_FILE.json", "w", encoding="utf-8") as file:
     file.write(z)
 
 
