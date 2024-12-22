@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import urllib.parse
+#Detta genererar TRAM_URL_FILE
 with open("D:\\PythonFiles\\tramstop_google_url.json",encoding='utf-8') as file:#orkar inte hålla på med filväg här
 
     y = json.load(file)
